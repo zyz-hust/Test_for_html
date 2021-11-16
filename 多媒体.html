@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+<title>段内导航</title>
+<style>
+    #audio1{
+        border-style:ridge;
+        border-color:#c3eefd;
+        border-width: 15px;
+    }
+
+</style>
+<script>
+function playmusic(){
+    document.getElementById("audio1").play();
+}
+function showpicture(){
+    document.getElementById("musicstaff").style.visibility="visible";
+}
+function hidepicture(){
+    document.getElementById("musicstaff").style.visibility="hidden";
+}
+function thanks(){
+    document.getElementById("thanks").innerHTML="Thanks for listening"
+}
+
+</script>
+</head>
+<header>
+</header>
+<body >
+<!--设置视频-->
+<video  width="658" height="444"    loop controls>
+    <source src="Seoul.mp4" type="video/mp4" />
+    <source src="Skyscrapers.mp4" type="video/mp4" />
+
+</video>
+<br><br>
+<!--设置音频-->
+<div style="margin-left: 40px;">
+    <!-- <h1>Music plays without any visible player</h1> -->
+    <h1>Music plays without any events</h1>
+    <br>
+    <div id="thanks">what</div>
+    <br>
+    <audio id="audio1" controls onplay="showpicture()" onpause="hidepicture()" onended="thanks()">
+    　　<source src="1.mp3" >
+    </audio>
+    <br><br>
+    <img src="picture1.jpeg" width="376" height="262" id="musicstaff" style="visibility: hidden;">
+</div>
+</body> 
+</html>
